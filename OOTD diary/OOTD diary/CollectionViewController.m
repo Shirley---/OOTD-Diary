@@ -19,9 +19,33 @@
 @property (nonatomic, strong) NSMutableArray *cellSizes;
 @end
 
+
+
 @implementation CollectionViewController
 
 static NSString * const reuseIdentifier = @"WaterfallCell";
+
++ (void) initialize
+{
+    capturedImages = [[NSMutableArray alloc] init];
+}
+
+- (void) setCapturedImages:(UIImage *) image
+{
+    [capturedImages addObject:image];
+}
+
+- (id) init
+{
+    self = [super init];
+    if (self == nil){
+        [capturedImages addObject: [UIImage imageNamed:@"cat1.jpg"]];
+        [capturedImages addObject: [UIImage imageNamed:@"cat2.jpg"]];
+        [capturedImages addObject: [UIImage imageNamed:@"cat3.jpg"]];
+        [capturedImages addObject: [UIImage imageNamed:@"cat4.jpg"]];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,13 +57,10 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CELL_IDENTIFIER];
     
     // Do any additional setup after loading the view.
-    self.capturedImages = [[NSMutableArray alloc] init];
+    
     self.descriptions = [[NSMutableArray alloc] init];
     
-    [self.capturedImages addObject: @"cat1.jpg"];
-    [self.capturedImages addObject: @"cat2.jpg"];
-    [self.capturedImages addObject: @"cat3.jpg"];
-    [self.capturedImages addObject: @"cat4.jpg"];
+
     
     [self.descriptions addObject:@"cat1"];
     [self.descriptions addObject:@"cat2"];
@@ -64,7 +85,7 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     
     ImageDetailViewController *imageDetailViewController = (ImageDetailViewController *)segue.destinationViewController;
-    imageDetailViewController.image = [UIImage imageNamed:[self.capturedImages objectAtIndex:indexPath.row]];
+    imageDetailViewController.image = [capturedImages objectAtIndex:indexPath.row];
     imageDetailViewController.detail = [self.descriptions objectAtIndex:indexPath.row];
 }
 
@@ -77,7 +98,7 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.capturedImages.count;
+    return capturedImages.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -87,9 +108,7 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
     cell.backgroundColor = [UIColor whiteColor];
     //cell.displayString = [NSString stringWithFormat:@"%ld", (long)indexPath.item];
     UIImage *myImage = [[UIImage alloc] init];
-    NSLog(@"count: %i",self.capturedImages.count);
-    NSLog(@"index: %i", indexPath.row);
-    myImage = [UIImage imageNamed:[self.capturedImages objectAtIndex:indexPath.row]];
+    myImage = [capturedImages objectAtIndex:indexPath.row];
     cell.imageView.image = myImage;
     return cell;
 }
@@ -148,7 +167,7 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
 
 
 #pragma mark - CHTCollectionViewDelegateWaterfallLayout
-/*
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return [self.cellSizes[indexPath.item] CGSizeValue];
@@ -185,18 +204,30 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
  }
 */
  
- 
+- (UIImage *)imageWithImage:(UIImage *)image scaledToFillSize:(CGSize)size
+{
+    CGFloat scale = MAX(size.width/image.size.width, size.height/image.size.height);
+    CGFloat width = image.size.width * scale;
+    CGFloat height = image.size.height * scale;
+    CGRect imageRect = CGRectMake((size.width - width)/2.0f, (size.height - height)/2.0f, width, height);
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:imageRect];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 #pragma mark - cell sizes
 - (NSMutableArray *)cellSizes {
     if (!_cellSizes) {
         _cellSizes = [NSMutableArray array];
-        for (NSInteger i = 0; i < self.capturedImages.count; i++) {
+        for (NSInteger i = 0; i < capturedImages.count; i++) {
             //CGSize size = CGSizeMake(arc4random() % 50 + 50, arc4random() % 50 + 50);
-            UIImage *myImage = [UIImage imageNamed: [self.capturedImages objectAtIndex:i]];
-            CGSize size = myImage.size;
-            size.height  = 100;
-            size.width = 100;
+            UIImage *myImage =  [capturedImages objectAtIndex:i];
+            UIImage *newImage = [self imageWithImage:myImage scaledToFillSize:CGSizeMake(150, 150)];
+            CGSize size = newImage.size;
+            //size.height  += 35;
+            //size.width += 35;
             _cellSizes[i] = [NSValue valueWithCGSize:size];
         }
     }

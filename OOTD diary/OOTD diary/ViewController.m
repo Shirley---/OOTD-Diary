@@ -47,6 +47,7 @@
     
     //self.layout = [[CHTCollectionViewWaterfallLayout alloc] init];
     self.layout = [[UICollectionViewFlowLayout alloc] init];
+    //self.collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:self.layout];
     self.collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:self.layout];
     self.myImages = [[NSMutableArray alloc]init];
 
@@ -84,8 +85,7 @@
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    //CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
-    //CollectionViewController *cc = [[CollectionViewController alloc] initWithCollectionViewLayout:layout];
+
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
@@ -96,12 +96,15 @@
     
     
     self.chosenImage = info[UIImagePickerControllerEditedImage];
-    [self.myImages addObject:self.chosenImage];
-    [self.collectionViewController setCapturedImages: self.myImages];
+    //[self.myImages addObject:self.chosenImage];
+    [self.collectionViewController setCapturedImages: self.chosenImage];
     self.imageView.image = self.chosenImage;
+    PFObject *image = [PFObject objectWithClassName:@"Image"];
+    image[@"picture"] = self.chosenImage;
+    
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
-    [self presentViewController:self.collectionViewController animated:YES completion:NULL];
+    //[self presentViewController:self.collectionViewController animated:YES completion:NULL];
     //[self flipToView];
     
 }

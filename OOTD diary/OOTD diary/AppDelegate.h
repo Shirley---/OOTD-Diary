@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "TransitionController.h"
 
+@class ParseStarterProjectViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) TransitionController *transitionController;
+//@property (strong, nonatomic) TransitionController *transitionController;
 
 @end
 
