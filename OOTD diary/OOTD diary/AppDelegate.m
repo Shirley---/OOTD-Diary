@@ -14,6 +14,7 @@
 // #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 #import "AppDelegate.h"
+#import "CollectionViewController.h"
 
 @implementation AppDelegate
 
@@ -70,6 +71,9 @@
                                                          UIRemoteNotificationTypeSound)];
     }
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [CollectionViewController setDefaultImages: [defaults objectForKey:@"data"]];
+    NSLog(@"Application did launch: default images size: %i", [CollectionViewController defaultImages].count);
     return YES;
 }
 
@@ -138,6 +142,10 @@
      If your application supports background execution,
      this method is called instead of applicationWillTerminate: when the user quits.
      */
+    NSLog(@"When saving, default counts to %i", [CollectionViewController defaultImages].count);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[CollectionViewController defaultImages] forKey:@"data"];
+    [defaults synchronize];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -158,6 +166,10 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+    
+    NSLog(@"When saving, default counts to %i", [CollectionViewController defaultImages].count);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[CollectionViewController defaultImages] forKey:@"data"];
 }
 
 #pragma mark - ()

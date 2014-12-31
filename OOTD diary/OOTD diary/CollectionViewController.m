@@ -17,6 +17,7 @@
 
 @interface CollectionViewController ()
 @property (nonatomic, strong) NSMutableArray *cellSizes;
+//@property (nonatomic, strong) CHTCollectionViewWaterfallCell *cell;
 @end
 
 
@@ -28,11 +29,34 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
 + (void) initialize
 {
     capturedImages = [[NSMutableArray alloc] init];
+    defaultImages = [[NSMutableArray alloc] init];
 }
 
-- (void) setCapturedImages:(UIImage *) image
++ (void) setCapturedImages:(UIImage *) image
 {
     [capturedImages addObject:image];
+    NSData *myData = UIImagePNGRepresentation(image);
+    [defaultImages addObject:myData];
+}
+
++ (void) setDefaultImages: (NSMutableArray *) array
+{
+    //NSLog(@"items in default images array: %i", array.count);
+    for (int i = 0; i < array.count; i++){
+        UIImage *temp = [UIImage imageWithData:array[i]];
+        [capturedImages addObject:temp];
+    }
+    //NSLog(@"default count: %i", capturedImages.count);
+}
+
++ (NSMutableArray *)capturedImages
+{
+    return capturedImages;
+}
+
++ (NSMutableArray *)defaultImages
+{
+    return defaultImages;
 }
 
 - (id) init
@@ -60,12 +84,25 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
     
     self.descriptions = [[NSMutableArray alloc] init];
     
-
-    
     [self.descriptions addObject:@"cat1"];
     [self.descriptions addObject:@"cat2"];
     [self.descriptions addObject:@"cat3"];
     [self.descriptions addObject:@"cat4"];
+    //NSLog(@"captured images count: %i",capturedImages.count);
+
+
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    for (int i = 0; i < capturedImages.count; i++){
+        CHTCollectionViewWaterfallCell *cell = (CHTCollectionViewWaterfallCell *)[self.collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER forIndexPath:[NSIndexPath indexPathWithIndex:i]];
+        cell.backgroundColor = [UIColor whiteColor];
+        UIImage *myImage = [[UIImage alloc] init];
+        myImage = [capturedImages objectAtIndex:i];
+        cell.imageView.image = myImage;
+    }
+    //NSLog(@"Setting default images!");
 }
 
 - (void)didReceiveMemoryWarning {

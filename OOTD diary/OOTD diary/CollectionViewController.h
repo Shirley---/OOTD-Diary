@@ -10,6 +10,7 @@
 #import "CHTCollectionViewWaterfallLayout.h"
 
 static NSMutableArray * capturedImages;
+static NSMutableArray * defaultImages;
 
 @interface CollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> //CHTCollectionViewDelegateWaterfallLayout>
 
@@ -19,6 +20,9 @@ static NSMutableArray * capturedImages;
 - (UIImage *)imageWithImage:(UIImage *)image scaledToFillSize:(CGSize)size;
 + (void) initialize;
 - (id) init;
-- (void) setCapturedImages:(NSString *) imageName;
++ (void) setCapturedImages:(UIImage *) image;
++ (void) setDefaultImages: (NSMutableArray *) array;
++ (NSMutableArray *)capturedImages;
++ (NSMutableArray *)defaultImages;
 
 @end

@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) UIImage *chosenImage;
 @property (nonatomic, strong) NSMutableArray *myImages;
-@property (nonatomic, strong) CollectionViewController *collectionViewController;
+//@property (nonatomic, strong) CollectionViewController *collectionViewController;
 //@property (nonatomic, strong) CHTCollectionViewWaterfallLayout *layout;
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 @end
@@ -46,9 +46,9 @@
     }
     
     //self.layout = [[CHTCollectionViewWaterfallLayout alloc] init];
-    self.layout = [[UICollectionViewFlowLayout alloc] init];
+    //self.layout = [[UICollectionViewFlowLayout alloc] init];
     //self.collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:self.layout];
-    self.collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:self.layout];
+    //self.collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:self.layout];
     self.myImages = [[NSMutableArray alloc]init];
 
 }
@@ -92,15 +92,13 @@
 
 // TODO:
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    NSLog(@"did finish picking media");
-    
     
     self.chosenImage = info[UIImagePickerControllerEditedImage];
     //[self.myImages addObject:self.chosenImage];
-    [self.collectionViewController setCapturedImages: self.chosenImage];
+    [CollectionViewController setCapturedImages: self.chosenImage];
     self.imageView.image = self.chosenImage;
-    PFObject *image = [PFObject objectWithClassName:@"Image"];
-    image[@"picture"] = self.chosenImage;
+    //PFObject *image = [PFObject objectWithClassName:@"Image"];
+    //image[@"picture"] = self.chosenImage;
     
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
