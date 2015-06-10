@@ -66,22 +66,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOTD diary/CollectionViewController.m"
-            timestampString = "440949506.70396"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -139,8 +123,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "263"
             endingLineNumber = "263"
-            landmarkName = "-cellSizes"
-            landmarkType = "5">
+            landmarkName = "@implementation CollectionViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -154,9 +138,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "264"
-            endingLineNumber = "264"
-            landmarkName = "-cellSizes"
-            landmarkType = "5">
+            endingLineNumber = "264">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -171,7 +153,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
-            landmarkName = "+setCapturedImages:"
+            landmarkName = "+initialize"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -187,7 +169,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
             endingLineNumber = "99"
-            landmarkName = "-viewDidAppear:"
+            landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -219,23 +201,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
             endingLineNumber = "37"
-            landmarkName = "+setCapturedImages:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OOTD diary/CollectionViewController.m"
-            timestampString = "440949506.70396"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "-collectionView:numberOfItemsInSection:"
+            landmarkName = "+initialize"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
