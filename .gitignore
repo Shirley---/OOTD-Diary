@@ -3,6 +3,7 @@ build/
 DerivedData
 
 ## Various settings
+*/project.pbxproj
 *.pbxuser
 !default.pbxuser
 *.pbxproj
