@@ -7,7 +7,6 @@
 
 @interface CollectionViewController ()
 @property (nonatomic, strong) NSMutableArray *cellSizes;
-//@property (nonatomic, strong) CHTCollectionViewWaterfallCell *cell;
 @end
 
 
@@ -45,28 +44,6 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
   return defaultImages;
 }
 
-- (id) init {
-  self = [super init];
-  if (self == nil){
-    [capturedImages addObject: [UIImage imageNamed:@"cat1.jpg"]];
-    [capturedImages addObject: [UIImage imageNamed:@"cat2.jpg"]];
-    [capturedImages addObject: [UIImage imageNamed:@"cat3.jpg"]];
-    [capturedImages addObject: [UIImage imageNamed:@"cat4.jpg"]];
-  }
-  return self;
-}
-
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  
-  self.descriptions = [[NSMutableArray alloc] init];
-  
-  [self.descriptions addObject:@"cat1"];
-  [self.descriptions addObject:@"cat2"];
-  [self.descriptions addObject:@"cat3"];
-  [self.descriptions addObject:@"cat4"];
-}
-
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
 }
@@ -85,7 +62,7 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
   ImageDetailViewController *imageDetailViewController =
       (ImageDetailViewController *)segue.destinationViewController;
   imageDetailViewController.image = [capturedImages objectAtIndex:indexPath.row];
-  imageDetailViewController.detail = [self.descriptions objectAtIndex:indexPath.row];
+  imageDetailViewController.detail = @"Description";
 }
 
 

@@ -1,7 +1,7 @@
 #import "MainViewController.h"
 #import "CollectionViewController.h"
 
-@interface MainViewController ()
+@interface MainViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, strong) UIImage *chosenImage;
 @property (nonatomic, strong) NSMutableArray *myImages;
@@ -21,24 +21,21 @@
   
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
-  
-  if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-      
-      UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                            message:@"Device has no camera"
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles: nil];
-      
-      [myAlertView show];
-      
-  }
   self.myImages = [[NSMutableArray alloc]init];
 
 }
 
 #pragma  mark - choose photo
 - (IBAction)takePhoto:(UIButton *)sender {
+  if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                          message:@"Device has no camera"
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles: nil];
+    [myAlertView show];
+    return;
+  }
   UIImagePickerController *picker = [[UIImagePickerController alloc] init];
   picker.delegate = self;
   picker.allowsEditing = YES;
@@ -60,7 +57,6 @@
   self.chosenImage = info[UIImagePickerControllerEditedImage];
   [CollectionViewController setCapturedImages: self.chosenImage];
   self.imageView.image = self.chosenImage;
-  
   
   [picker dismissViewControllerAnimated:YES completion:NULL];
 }
