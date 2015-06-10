@@ -53,23 +53,6 @@
 
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-    [super viewDidAppear:animated];
-    //[self updateLayoutForOrientation:[UIApplication sharedApplication].statusBarOrientation];
-}
-
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    /*
-    [self.view addSubview:self.collectionView];
-    self.imageView.image = self.chosenImage;
-     */
-        
-}
-
 #pragma  mark - choose photo
 - (IBAction)takePhoto:(UIButton *)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];

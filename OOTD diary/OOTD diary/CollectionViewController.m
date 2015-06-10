@@ -30,23 +30,23 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
 {
     capturedImages = [[NSMutableArray alloc] init];
     defaultImages = [[NSMutableArray alloc] init];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  if ([defaults objectForKey:@"data"]) {
+    defaultImages = [defaults objectForKey:@"data"];
+    for (int i =0; i < defaultImages.count; i++) {
+      [capturedImages addObject:[UIImage imageWithData:defaultImages[i]]];
+    }
+  }
 }
 
 + (void) setCapturedImages:(UIImage *) image
 {
-    [capturedImages addObject:image];
-    NSData *myData = UIImagePNGRepresentation(image);
-    [defaultImages addObject:myData];
-}
-
-+ (void) setDefaultImages: (NSMutableArray *) array
-{
-    //NSLog(@"items in default images array: %i", array.count);
-    for (int i = 0; i < array.count; i++){
-        UIImage *temp = [UIImage imageWithData:array[i]];
-        [capturedImages addObject:temp];
-    }
-    //NSLog(@"default count: %i", capturedImages.count);
+  [capturedImages addObject:image];
+  NSData *myData = UIImagePNGRepresentation(image);
+  [defaultImages addObject:myData];
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  [defaults setObject:defaultImages forKey:@"data"];
+  [defaults synchronize];
 }
 
 + (NSMutableArray *)capturedImages
@@ -74,40 +74,16 @@ static NSString * const reuseIdentifier = @"WaterfallCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CELL_IDENTIFIER];
-    
-    // Do any additional setup after loading the view.
-    
     self.descriptions = [[NSMutableArray alloc] init];
     
     [self.descriptions addObject:@"cat1"];
     [self.descriptions addObject:@"cat2"];
     [self.descriptions addObject:@"cat3"];
     [self.descriptions addObject:@"cat4"];
-    //NSLog(@"captured images count: %i",capturedImages.count);
-
-
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    for (int i = 0; i < capturedImages.count; i++){
-        CHTCollectionViewWaterfallCell *cell = (CHTCollectionViewWaterfallCell *)[self.collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER forIndexPath:[NSIndexPath indexPathWithIndex:i]];
-        cell.backgroundColor = [UIColor whiteColor];
-        UIImage *myImage = [[UIImage alloc] init];
-        myImage = [capturedImages objectAtIndex:i];
-        cell.imageView.image = myImage;
-    }
-    //NSLog(@"Setting default images!");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
