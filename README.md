@@ -29,4 +29,3 @@ License
 ----
 
 MIT
->>>>>>> cbb8353d6d2a71a51e4062e05327faf1a7444a21
