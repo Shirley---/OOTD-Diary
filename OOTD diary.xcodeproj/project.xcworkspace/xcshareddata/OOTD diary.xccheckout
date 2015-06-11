@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>94EDABA6-3BA2-4F54-8CAE-180576B0CD0E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OOTD diary</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3563E8DD77A9A737D4617C719FDB661E8BD93875</key>
+		<string>https://github.com/Shirley---/OOTDdiary.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OOTD diary/OOTD diary.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3563E8DD77A9A737D4617C719FDB661E8BD93875</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Shirley---/OOTDdiary.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3563E8DD77A9A737D4617C719FDB661E8BD93875</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3563E8DD77A9A737D4617C719FDB661E8BD93875</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OOTDdiary</string>
+		</dict>
+	</array>
+</dict>
+</plist>
