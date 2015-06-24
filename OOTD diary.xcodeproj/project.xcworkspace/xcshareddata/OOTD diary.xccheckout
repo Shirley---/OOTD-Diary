@@ -11,23 +11,35 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3563E8DD77A9A737D4617C719FDB661E8BD93875</key>
-		<string>https://github.com/Shirley---/OOTDdiary.git</string>
+		<string>https://github.com/Shirley---/OOTD-Diary.git</string>
+		<key>6D9525208BC625661DDAC5B93536CC8BAC84E4E0</key>
+		<string>https://github.com/Shirley---/OOTD-Diary.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OOTD diary/OOTD diary.xcodeproj</string>
+	<string>OOTD diary.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3563E8DD77A9A737D4617C719FDB661E8BD93875</key>
-		<string>../../..</string>
+		<string>../..</string>
+		<key>6D9525208BC625661DDAC5B93536CC8BAC84E4E0</key>
+		<string>../..OOTD%20diary/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Shirley---/OOTDdiary.git</string>
+	<string>https://github.com/Shirley---/OOTD-Diary.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>3563E8DD77A9A737D4617C719FDB661E8BD93875</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6D9525208BC625661DDAC5B93536CC8BAC84E4E0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OOTD%20diary</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
