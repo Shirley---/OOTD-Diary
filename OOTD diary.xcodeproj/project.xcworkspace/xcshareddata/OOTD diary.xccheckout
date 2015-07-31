@@ -22,7 +22,7 @@
 		<key>3563E8DD77A9A737D4617C719FDB661E8BD93875</key>
 		<string>../..</string>
 		<key>6D9525208BC625661DDAC5B93536CC8BAC84E4E0</key>
-		<string>../..OOTD%20diary/</string>
+		<string>../..OOTD%20diary</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Shirley---/OOTD-Diary.git</string>
@@ -36,17 +36,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6D9525208BC625661DDAC5B93536CC8BAC84E4E0</string>
+			<string>3563E8DD77A9A737D4617C719FDB661E8BD93875</string>
 			<key>IDESourceControlWCCName</key>
-			<string>OOTD%20diary</string>
+			<string>OOTDdiary</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3563E8DD77A9A737D4617C719FDB661E8BD93875</string>
+			<string>6D9525208BC625661DDAC5B93536CC8BAC84E4E0</string>
 			<key>IDESourceControlWCCName</key>
-			<string>OOTDdiary</string>
+			<string>OOTDdiaryOOTD%20diary</string>
 		</dict>
 	</array>
 </dict>

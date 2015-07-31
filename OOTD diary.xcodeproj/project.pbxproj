@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E826D50D1B6B39BF00B686EE /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E826D50C1B6B39BF00B686EE /* CHTCollectionViewWaterfallLayout.m */; };
+		E826D5101B6B3BD400B686EE /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = E826D50F1B6B3BD400B686EE /* MainView.m */; };
+		E826D5161B6B4FFF00B686EE /* DiaryCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E826D5151B6B4FFF00B686EE /* DiaryCollectionView.m */; };
+		E826D5181B6B50D400B686EE /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E826D5171B6B50D400B686EE /* CollectionViewController.m */; };
 		E8A95FC61A0ED59900F2101C /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A95FC51A0ED59900F2101C /* ImageDetailViewController.m */; };
-		E8A95FC91A0EDBBE00F2101C /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A95FC81A0EDBBE00F2101C /* CollectionViewController.m */; };
 		E8A95FCC1A0EE21200F2101C /* TransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A95FCB1A0EE21200F2101C /* TransitionController.m */; };
 		E8B313221B29499500C11EE2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B313211B29499500C11EE2 /* MainViewController.m */; };
 		E8C0D94D1A005B9C003B5F72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0D94C1A005B9C003B5F72 /* main.m */; };
@@ -17,8 +20,6 @@
 		E8C0D95B1A005B9C003B5F72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8C0D9591A005B9C003B5F72 /* LaunchScreen.xib */; };
 		E8C0D9671A005B9C003B5F72 /* OOTD_diaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0D9661A005B9C003B5F72 /* OOTD_diaryTests.m */; };
 		E8C0D9B61A06D5A0003B5F72 /* CHTCollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0D9B11A06D5A0003B5F72 /* CHTCollectionViewWaterfallCell.m */; };
-		E8C0D9B71A06D5A0003B5F72 /* CHTCollectionViewWaterfallFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0D9B31A06D5A0003B5F72 /* CHTCollectionViewWaterfallFooter.m */; };
-		E8C0D9B81A06D5A0003B5F72 /* CHTCollectionViewWaterfallHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0D9B51A06D5A0003B5F72 /* CHTCollectionViewWaterfallHeader.m */; };
 		E8C0D9BF1A07104E003B5F72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C0D9BD1A07104E003B5F72 /* Main.storyboard */; };
 		E8F27AFF1A17BAE100D03D81 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F27AFD1A17BAE100D03D81 /* Bolts.framework */; };
 		E8F27B001A17BAE100D03D81 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F27AFE1A17BAE100D03D81 /* Parse.framework */; };
@@ -45,10 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E826D50B1B6B39BF00B686EE /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		E826D50C1B6B39BF00B686EE /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		E826D50E1B6B3BD400B686EE /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		E826D50F1B6B3BD400B686EE /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		E826D5141B6B4FFF00B686EE /* DiaryCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryCollectionView.h; sourceTree = "<group>"; };
+		E826D5151B6B4FFF00B686EE /* DiaryCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryCollectionView.m; sourceTree = "<group>"; };
+		E826D5171B6B50D400B686EE /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewController.m; path = "../../../../Desktop/OOTD-Diary/OOTD diary/CollectionViewController.m"; sourceTree = "<group>"; };
 		E8A95FC41A0ED59900F2101C /* ImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
 		E8A95FC51A0ED59900F2101C /* ImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
 		E8A95FC71A0EDBBE00F2101C /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
-		E8A95FC81A0EDBBE00F2101C /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		E8A95FCA1A0EE21200F2101C /* TransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionController.h; sourceTree = "<group>"; };
 		E8A95FCB1A0EE21200F2101C /* TransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionController.m; sourceTree = "<group>"; };
 		E8B313201B29499500C11EE2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -65,10 +72,6 @@
 		E8C0D9661A005B9C003B5F72 /* OOTD_diaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOTD_diaryTests.m; sourceTree = "<group>"; };
 		E8C0D9B01A06D5A0003B5F72 /* CHTCollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallCell.h; sourceTree = "<group>"; };
 		E8C0D9B11A06D5A0003B5F72 /* CHTCollectionViewWaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallCell.m; sourceTree = "<group>"; };
-		E8C0D9B21A06D5A0003B5F72 /* CHTCollectionViewWaterfallFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallFooter.h; sourceTree = "<group>"; };
-		E8C0D9B31A06D5A0003B5F72 /* CHTCollectionViewWaterfallFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallFooter.m; sourceTree = "<group>"; };
-		E8C0D9B41A06D5A0003B5F72 /* CHTCollectionViewWaterfallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallHeader.h; sourceTree = "<group>"; };
-		E8C0D9B51A06D5A0003B5F72 /* CHTCollectionViewWaterfallHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallHeader.m; sourceTree = "<group>"; };
 		E8C0D9BE1A07104E003B5F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8F27AFD1A17BAE100D03D81 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		E8F27AFE1A17BAE100D03D81 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -136,10 +139,14 @@
 		E8C0D9491A005B9C003B5F72 /* OOTD diary */ = {
 			isa = PBXGroup;
 			children = (
+				E826D50E1B6B3BD400B686EE /* MainView.h */,
+				E826D50F1B6B3BD400B686EE /* MainView.m */,
 				E8B313201B29499500C11EE2 /* MainViewController.h */,
 				E8B313211B29499500C11EE2 /* MainViewController.m */,
 				E8A95FC71A0EDBBE00F2101C /* CollectionViewController.h */,
-				E8A95FC81A0EDBBE00F2101C /* CollectionViewController.m */,
+				E826D5171B6B50D400B686EE /* CollectionViewController.m */,
+				E826D5141B6B4FFF00B686EE /* DiaryCollectionView.h */,
+				E826D5151B6B4FFF00B686EE /* DiaryCollectionView.m */,
 				E8C0D9BD1A07104E003B5F72 /* Main.storyboard */,
 				E8A95FCA1A0EE21200F2101C /* TransitionController.h */,
 				E8A95FCB1A0EE21200F2101C /* TransitionController.m */,
@@ -147,10 +154,8 @@
 				E8A95FC51A0ED59900F2101C /* ImageDetailViewController.m */,
 				E8C0D9B01A06D5A0003B5F72 /* CHTCollectionViewWaterfallCell.h */,
 				E8C0D9B11A06D5A0003B5F72 /* CHTCollectionViewWaterfallCell.m */,
-				E8C0D9B21A06D5A0003B5F72 /* CHTCollectionViewWaterfallFooter.h */,
-				E8C0D9B31A06D5A0003B5F72 /* CHTCollectionViewWaterfallFooter.m */,
-				E8C0D9B41A06D5A0003B5F72 /* CHTCollectionViewWaterfallHeader.h */,
-				E8C0D9B51A06D5A0003B5F72 /* CHTCollectionViewWaterfallHeader.m */,
+				E826D50B1B6B39BF00B686EE /* CHTCollectionViewWaterfallLayout.h */,
+				E826D50C1B6B39BF00B686EE /* CHTCollectionViewWaterfallLayout.m */,
 				E8C0D9BC1A06D5CF003B5F72 /* Vendor */,
 				E8C0D94A1A005B9C003B5F72 /* Supporting Files */,
 			);
@@ -313,15 +318,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8C0D9B71A06D5A0003B5F72 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				E8C0D9501A005B9C003B5F72 /* AppDelegate.m in Sources */,
 				E8A95FC61A0ED59900F2101C /* ImageDetailViewController.m in Sources */,
+				E826D5101B6B3BD400B686EE /* MainView.m in Sources */,
 				E8C0D9B61A06D5A0003B5F72 /* CHTCollectionViewWaterfallCell.m in Sources */,
+				E826D5161B6B4FFF00B686EE /* DiaryCollectionView.m in Sources */,
 				E8B313221B29499500C11EE2 /* MainViewController.m in Sources */,
-				E8C0D9B81A06D5A0003B5F72 /* CHTCollectionViewWaterfallHeader.m in Sources */,
+				E826D50D1B6B39BF00B686EE /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				E8C0D94D1A005B9C003B5F72 /* main.m in Sources */,
+				E826D5181B6B50D400B686EE /* CollectionViewController.m in Sources */,
 				E8A95FCC1A0EE21200F2101C /* TransitionController.m in Sources */,
-				E8A95FC91A0EDBBE00F2101C /* CollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

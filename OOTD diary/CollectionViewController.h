@@ -1,14 +1,18 @@
 #import <UIKit/UIKit.h>
 
+@class CHTCollectionViewWaterfallLayout;
+
 static NSMutableArray *capturedImages;
 static NSMutableArray *defaultImages;
 
 @interface CollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property(nonatomic, strong) UICollectionViewLayout *collectionViewLayout;
 
 - (UIImage *)imageWithImage:(UIImage *)image scaledToFillSize:(CGSize)size;
-+ (void) initialize;
+//+ (void) initialize;
+- (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout;
+
 + (void) setCapturedImages:(UIImage *) image;
 + (NSMutableArray *)capturedImages;
 + (NSMutableArray *)defaultImages;
